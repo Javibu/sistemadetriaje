@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BUSCAR PACIENTE</title>
+    <link rel="stylesheet" href="../Css/css.css"> <!--Estilo CSS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" type="text/javascript"> 
+        </script>
+
+        <!--Validacion Login-->
+    <script> 
+        $(document).ready(function(){
+            var prueba
+
+            $("#btnconsultar").click(function(){
+                var apellido=$("#txtApellido").val();
+                var nombre=$("#txtnombre").val();
+                var codigo=$("#txtcodigo").val();
+                var cedula=$("#txtcedula").val();
+
+                if((apellido == "Benitez") || (nombre == "Junior") || (codigo==5555) || (cedula==1234567890)){
+                    
+                     var htmlpuro='<table border=1>'
+                           htmlpuro+='<td>COD</td>'
+                           htmlpuro+='<td>CEDULA</td>'
+                           htmlpuro+='<td>APELLIDOS</td>'
+                           htmlpuro+='<td>NOMBRES</td>'
+                           htmlpuro+='<td>EDAD</td>'
+                           htmlpuro+='<td>PESO</td>'
+                           htmlpuro+='<td>F. NACIMIENTO</td>'
+                           htmlpuro+='<td>GENERO</td>'
+                       htmlpuro+='<tr>'
+                           htmlpuro+='<td>5555</td>'
+                           htmlpuro+='<td>1313699496</td>'
+                           htmlpuro+='<td>Benitez</td>'
+                           htmlpuro+='<td>Junior</td>'
+                           htmlpuro+='<td>21</td>'
+                           htmlpuro+='<td>72Kg</td>'
+                           htmlpuro+='<td>01/03/1995</td>'
+                           htmlpuro+='<td>Masculino</td>'
+                           htmlpuro+='<td><input type="button" value="Mostrar" id="btnMostrar"/></td>';
+                        htmlpuro+='</tr>'
+
+                   htmlpuro+='</table>'
+                    $("#contenido").html(htmlpuro)
+
+                    
+              
+                }else alert("No se encuentra el Usuario")
+                
+            })
+            $("#btnRegistrar").click(function(){
+
+                    window.location.href='../Registro/Registro.html';
+                
+            });
+            });
+
+                </script>
+
+</head>
+<body>
+
+<!--Barra de herramienta-->
+
+<div class="main">
+<div id="navbar">
+<span class="inbar">
+    <ul>
+        <li class="navhome"><a><span>SISTEMA DE TRIAJE</span></a></li>
+        <li class="navotros"><a><span>USUARIO</span></a></li>
+        <li class="navsalir"><a href="../../Index.html"><span>SALIR</span></a></li>
+    </ul>
+    
+</span>
+</div>
+
+<div id="menu"> <!--Barra Indice-->
+    <ul>
+    <center>
+    <li><a href = "../Triaje/Triaje.html">TRIAJE</a></li>
+
+    <li><a href = "../Espera/Espera.html">EN ESPERA..</a></li>
+
+    <li><a href = "../Atendiendose/Atendiendose.html">ATENDIENDOSE..</a></li>
+
+    <li><a href = "../Egresados/Egresados.html">EGRESADOS..</a></li>
+</center>
+</ul>
+</div>
+<center> <h1>BUSCAR PACIENTE</h1> </center>
+<div id="Busqueda"><h4><center>
+<input type="text" id="txtApellido" value="" placeholder="Ingrese Apellido"><br> 
+  <input type="text" id="txtnombre" value="" placeholder="Ingrese Nombre"><br> 
+  <input type="number" id="txtcodigo" value="" placeholder="Ingrese Codigo"><br>
+  <input type="number" id="txtcedula" value="" placeholder="Ingrese Cédula"><br>
+</h4>
+  </center></div>
+
+    <center><div id='contenido'></div></center>
+  <form>
+           <br><br><center><input type="button" id="btnconsultar" value="Buscar" class="boton"/></center> 
+        </form>
+
+
+</body>
+</html>

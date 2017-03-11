@@ -1,0 +1,317 @@
+/* CSS del Menú */
+#navbar{
+width:auto;
+height:36px;
+background:url(img/navbar-bg.png) left top repeat-x; }
+#navbar .inbar{
+display:block;
+height:36px;
+background:url(img/right-round.png) right top no-repeat; }
+
+#navbar ul, #navbar ul li{
+border:0px;
+margin:0px;
+padding:0px;
+list-style:none;
+height:36px;
+line-height:36px; }
+
+#navbar ul{
+background:url(img/left-round.png) left top no-repeat; }
+
+#navbar ul li{
+
+float:left;
+
+display:block;
+
+line-height:36px; }
+
+#navbar ul li a{
+
+color:#403e32;
+
+text-decoration:none;
+
+font-weight:bold;
+
+display:block; }
+
+#navbar ul li a span{
+
+padding:0 20px 0 0;
+height:36px;
+line-height:36px;
+display:block;
+margin-left:20px; }
+
+#navbar .navhome a, #navbar .navhome a:hover{
+
+background:url(img/a-bg.png) left top no-repeat;
+
+height:36px;
+
+line-height:36px; }
+
+#navbar .navhome a span, #navbar .navhome a:hover span{
+
+color:#FFFFFF;
+
+background:url(img/span-bg.png) right top no-repeat;
+
+height:36px;
+
+line-height:36px; }
+
+#navbar ul li a:hover{
+
+background:url(img/ahover-bg.png) left top no-repeat;
+
+height:36px;
+
+line-height:36px; }
+
+#navbar ul li a:hover span{
+
+background:url(img/spanhover-bg.png) right top no-repeat;
+
+height:36px;
+
+line-height:36px; }
+
+#navbar .navotros a span{
+	padding-left: 920px;
+}
+
+#menu ul li
+{
+	background: #E3E1E1;
+	display: inline-block;
+	border-radius: .8em;
+	color: #C71717;
+	padding: .9em;
+	font-weight: bold;
+	color: black;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#E3E1E1), to(#));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+/* efectos de boton */
+#menu ul li:hover {
+background: #5C655C;
+
+}
+
+
+#menu ul li a {
+	color: black;
+	text-decoration: none;
+}
+
+/* CSS de los botones */
+input[type=button] {
+	margin-right: 10px;
+	margin-top: 0px;
+	width: 80px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#E3E1E1), to(#));
+	background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+	border-radius: 30px;
+	border: 1px solid #66add6;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+input[type=button]:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#E3E1E1), to(#E3E1E1));
+	background-image: -moz-linear-gradient(top left 90deg, 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+
+input[type=button]:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#5C655C), to(#5C655C));
+	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+
+/*Css del select*/
+.select2-container {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.select2-container .select2-choice {
+    display: block;
+    height: 26px;
+    padding: 0 0 0 8px;
+    overflow: hidden;
+    position: relative;
+
+    border: 1px solid #aaa;
+    white-space: nowrap;
+    line-height: 26px;
+    color: #444;
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    background-clip: padding-box;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.5, #fff));
+    background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 50%);
+    background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+    background-image: linear-gradient(to top, #eee 0%, #fff 50%);
+}
+html[dir="rtl"] .select2-container .select2-choice {
+    padding: 0 8px 0 0;
+}
+.select2-container .select2-choice > .select2-chosen {
+    margin-right: 175px;
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+    float: none;
+    width: auto;
+}
+.select2-drop {
+    width: 100%;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+
+    background: #fff;
+    color: #000;
+    border: 1px solid #aaa;
+    border-top: 0;
+
+    border-radius: 0 0 4px 4px;
+
+    -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+            box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+}
+.select2-container .select2-choice .select2-arrow {
+    display: inline-block;
+    width: 18px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    border-left: 1px solid #aaa;
+    border-radius: 0 4px 4px 0;
+
+    background-clip: padding-box;
+
+    background: #ccc;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee));
+    background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+    background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#cccccc', GradientType = 0);
+    background-image: linear-gradient(to top, #ccc 0%, #eee 60%);
+}
+.select2-results {
+    max-height: 300px;
+    padding: 0 0 0 4px;
+    margin: 4px 4px 4px 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.select2-results .select2-result-label {
+    padding: 3px 7px 4px;
+    margin: 0;
+    cursor: pointer;
+
+    min-height: 1em;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+.select2-results .select2-highlighted {
+    background: #3875d7;
+    color: #fff;
+}
+.select2-result-selectable .select2-match,
+.select2-result-unselectable .select2-match {
+    text-decoration: underline;
+}
+
+.select2-offscreen, .select2-offscreen:focus {
+    clip: rect(0 0 0 0) !important;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    outline: 0 !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+.select2-display-none {
+    display: none;
+}
+
+.select2-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.select2-drop-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 9998;
+    /* styles required for IE to work */
+    background-color: #fff;
+    filter: alpha(opacity=0);
+}
+
+
+
+
+
+

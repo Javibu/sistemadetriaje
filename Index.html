@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>SISTEMA CENTRO DE SALUD MANTA</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="css/styles.css">  <!--Estilo CSS-->
+	<link rel="stylesheet" href="css/animate.css"> <!--Estilo CSS-->
+	<script src="jquery.min.js" type="text/javascript"> 
+        </script>
+
+        <!--Validacion Login-->
+    <script> 
+        $(document).ready(function(){
+             $("#idRegis").click(function(){
+            	window.location.href='Indice/Reg_Doc/Reg_Doc.html';
+            })
+            var prueba
+            $("#idIngresar").click(function(){
+            	var cedu=$("#idCedula").val();
+            	var contra=$("#idContrasena").val();
+               		
+                   	$.ajax({
+                   type:"GET",
+                   url:"http://localhost:3000/todo",
+                   dataType:"json",
+                   contentType:"text/plain"
+               }).done(function(msg){
+                   for (var dato in msg[0])
+                   {
+                   	if((cedu==msg[0][dato].cedula)&&(contra==msg[0][dato].contrasena)){
+                	window.location.href='http://triaje.azurewebsites.net/Indice/Triaje/Triaje.html';
+                   }else alert("Usuario o Contraseña Incorrecta, verifique de nuevo")
+                   }
+                   });
+            })
+            })
+
+                </script>
+</head>
+<body bgcolor text = "black"> <!--Ingreso al Login-->
+<center>
+
+	<BR></BR>
+	<BR></BR>
+ 
+<strong><font size="6" face="Times New Roman">SISTEMA DE TRIAJE DE MANCHESTER DEL CENTRO DE SALUD</font></strong> </center>
+	
+	<div id="container">
+		<form>
+			
+		<label for="name">Usuario:</label>
+		<input type="name" id="idCedula">
+		<label for="username">Contraseña:</label>
+		<input type="password" id="idContrasena">
+		<div id="lower">
+		<input type="button"  id="idIngresar" value="Ingresar" class="button">
+		<input type="button"  id="idRegis" value="Resgistrar" class="button">
+		<div id="divGenerado"></div>
+		</div>
+		
+		</form>
+		
+	</div>
+</body>
+</html>

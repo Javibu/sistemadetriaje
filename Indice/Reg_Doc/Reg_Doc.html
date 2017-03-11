@@ -1,0 +1,104 @@
+<html5>
+
+    <head>
+        <title>REGISTRO DE PACIENTES</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../Css/cssRegistro.css">
+        <link rel="stylesheet" href="../Css/css.css">
+         <script src="../../jquery.min.js" type="text/javascript"></script>
+            
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $("#idIngresar").click(function(){
+                var nombre=$("#apellido").val();
+                var cedula=$("#cedula").val(); 
+                var edad=$("#edad").val();
+                var contra=$("#contrasena").val();
+                var contra1=$("#contrasena1").val();
+
+                datos={"cedula":cedula, "nombre":nombre, "edad":edad, "contrasena":contrasena};
+                if(contrasena==contrasena1){
+                 $.ajax({
+                   type:"POST",
+                   url:"http://localhost:3000/todo",
+                   dataType:"text",
+                   contentType:"application/json"
+                   data: JSON.stringify(datos)
+               }).done(function(msg){
+                    alert("Registrado")
+                });
+                }else alert("Contraseña incorrecta")
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <!--Barra de herramienta-->
+
+<div class="main">
+<div id="navbar">
+<span class="inbar">
+    <ul>
+        <li class="navhome"><a><span>SISTEMA DE TRIAJE</span></a></li>
+        <li class="navsalir"><a href="../../Index.html"><span>SALIR</span></a></li>
+    </ul>
+    
+</span>
+</div>
+
+        <div id="container"></div>
+        <center>
+             <h1>REGISTRO DE DOCTOR</h1> 
+        </center>
+        <div class="formulario">
+            <center>
+                <form method="post" action="">
+                    <!--- genera el espacio para insertar mis datos -->
+                    <div>
+                        <label id="lapellido"> <b> Apellidos y Nombre:</b> 
+                        </label>
+                        <input type="text" id="apellido" class="apellido" name="apellido" placeholder="Apellido primero luego Nombre" required>
+                        <br>
+                    </div>
+                    <div>
+                        <label id="lcedula"> <b>Cédula:</b> 
+                        </label>
+                        <input type="text" id="cedula" class="cedula" name="cedula" placeholder="Ejemplo: 1234567890" required>
+                        <br>
+                    </div>
+                    <div>
+                        <label id="ledad"> <b>Edad:</b> 
+                        </label>
+                        <input type="text" id="edad" class="edad" name="edad" placeholder="Solo Números" required>
+                        <br>
+                    </div>
+                    <div>
+                        <label id="lcontrasena"> <b>Contraseña:</b> 
+                        </label>
+                        <input type="password" id="contrasena" class="contrasena" name="contrasena" placeholder="**********"required>
+                        <br>
+                    </div>
+                    <div>
+                        <label id="lcontrasena1"> <b>Confirme Contraseña:</b> 
+                        </label>
+                        <input type="password" id="contrasena1" class="contrasena1" name="contrasena1" placeholder="**********"required>
+                        <br>
+                    </div>
+
+                    <br>
+                    <br>
+                    <div>
+                        <button type="button" class="boton" id="idIngresar" value="Registrar Paciente">Registrar</button>
+                    </div>
+
+                </form>
+            </center>
+        </div>
+    </body>
+
+
+
+</html5>
